@@ -77,6 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Exponer setBranch globalmente para que intro.js pueda usarla
+    window.setBranch = setBranch;
+
     branchTabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             setBranch(btn.dataset.branch);
