@@ -79,14 +79,15 @@
             <div class="wrap">
                 <div class="hero-grid">
                     <div class="hero-text-col">
-                        <div class="hero-pill">
-                            <span class="pulse-dot"></span>
-                            <span>Abierto hoy en 4 sucursales de Morelia</span>
+                        <div id="hero-status-badge" class="hero-status-badge">
+                            <span class="hero-status-dot open" id="hero-status-dot"></span>
+                            <span id="hero-status-text">Abierto ahora · 4 sucursales</span>
+                            <span class="hero-status-time" id="hero-status-time">Cierra a las 5:00 PM</span>
                         </div>
-                        <h1 class="hero-title">
+                        <h1 class="hero-title reveal">
                             Cocina sincera, sobremesas largas y <em>mañanas con calma</em>.
                         </h1>
-                        <p class="hero-lead">
+                        <p class="hero-lead reveal reveal-delay-1">
                             Desayunos artesanales, panadería recién horneada y café de especialidad en las terrazas con más encanto y plantas de Morelia.
                         </p>
                         <div class="hero-ctas">
@@ -114,9 +115,9 @@
                         </div>
                     </div>
 
-                    <div class="hero-visual-wrapper">
-                        <div class="hero-image-card">
-                            <img src="images/terraza_leones.jpg" alt="Terraza de Casa Condesa Morelia con plantas, leones de cantera y patio exterior">
+                    <div class="hero-visual-wrapper reveal reveal-delay-2">
+                        <div class="hero-image-card" id="hero-image-card">
+                            <img src="images/terraza_leones.jpg" alt="Terraza de Casa Condesa Morelia con plantas, leones de cantera y patio exterior" id="hero-parallax-img">
                         </div>
                         <div class="floating-badge badge-bottom-left">
                             <div class="badge-icon-box">
@@ -137,6 +138,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Carrusel Flotante de Fotos ── -->
+        <section class="photo-carousel-section">
+            <div class="photo-carousel-header">
+                <span class="eyebrow">Momentos en Casa Condesa</span>
+                <h2 class="section-title" style="margin-bottom:0">Nuestros rincones favoritos</h2>
+            </div>
+            <div class="photo-carousel-track-wrapper">
+                <div class="photo-carousel-track" id="photo-carousel-track">
+                    <!-- Las cards se generan via JS -->
                 </div>
             </div>
         </section>
@@ -480,64 +494,11 @@
             </div>
         </section>
 
-        <section class="testimonials-section">
-            <div class="wrap">
-                <div class="section-header">
-                    <span class="eyebrow">Comunidad Condesa</span>
-                    <h2 class="section-title">Lo que dicen quienes nos visitan</h2>
-                </div>
-
-                <div class="testi-grid">
-                    <div class="testi-card">
-                        <div>
-                            <div class="testi-stars">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </div>
-                            <p class="testi-quote">«La terraza se siente como estar desayunando en el jardín de tu mejor amiga. Los chilaquiles verdes con pollo son insuperables.»</p>
-                        </div>
-                        <div class="testi-author">
-                            <span class="testi-author-name">Valeria Morales</span>
-                            <span class="testi-author-source">Google Reviews · Local Guide</span>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div>
-                            <div class="testi-stars">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </div>
-                            <p class="testi-quote">«Ambiente súper relajado, ideal para venir a leer, trabajar un rato o tener una sobremesa larga. El café latte es de los mejores de Morelia.»</p>
-                        </div>
-                        <div class="testi-author">
-                            <span class="testi-author-name">Carlos Mendoza</span>
-                            <span class="testi-author-source">TikTok Morelia Foodies</span>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div>
-                            <div class="testi-stars">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </div>
-                            <p class="testi-quote">«La atención es impecable y la vibra del lugar es hermosa. 100% pet friendly, mi perrita siempre es bienvenida con un platito de agua.»</p>
-                        </div>
-                        <div class="testi-author">
-                            <span class="testi-author-name">Fernanda R.</span>
-                            <span class="testi-author-source">Restaurant Guru 2026</span>
-                        </div>
-                    </div>
+        <!-- ── Ticker Tape de Testimonios ── -->
+        <section class="ticker-section" aria-label="Reseñas de clientes">
+            <div class="ticker-track-wrapper">
+                <div class="ticker-track" id="ticker-track">
+                    <!-- Generado via JS -->
                 </div>
             </div>
         </section>
@@ -558,6 +519,30 @@
             </div>
         </section>
     </main>
+
+    <!-- ── Modal Expandible de Menú ── -->
+    <div id="menu-modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle del platillo">
+        <div class="menu-modal-card" id="menu-modal-card">
+            <div class="menu-modal-img" id="modal-img-container">
+                <img src="" alt="" id="modal-img">
+                <span class="menu-modal-tag" id="modal-tag"></span>
+                <div class="menu-modal-price-tag" id="modal-price"></div>
+                <button class="menu-modal-close" id="menu-modal-close" aria-label="Cerrar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="menu-modal-body">
+                <div>
+                    <p class="menu-modal-eyebrow" id="modal-category"></p>
+                    <h3 class="menu-modal-title" id="modal-title"></h3>
+                    <p class="menu-modal-desc" id="modal-desc"></p>
+                </div>
+                <div class="menu-modal-ingredients" id="modal-ingredients"></div>
+                <div class="menu-modal-features" id="modal-features"></div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="site-footer">
         <div class="wrap">
@@ -612,6 +597,8 @@
     <script src="intro.js"></script>
     <!-- Lógica funcional -->
     <script src="app.js"></script>
+    <!-- Mejoras interactivas -->
+    <script src="enhancements.js"></script>
 
 </body>
 </html>
